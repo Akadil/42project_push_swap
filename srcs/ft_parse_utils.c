@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:30:48 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 15:31:57 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:24:48 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ int	ft_find_n_word(char const *s, char c)
 
 static void	ft_error(void)
 {
-	write(1, "Error!", 6);
+	write(1, "Error\n", 6);
 }

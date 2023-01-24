@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:31:39 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:10:25 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:23:46 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int	ft_check_normal(char **argv, int isString)
 
 static void	ft_error(void)
 {
-	write(1, "Error!", 6);
+	write(1, "Error\n", 6);
 }
