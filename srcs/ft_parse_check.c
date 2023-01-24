@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_check.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 15:31:39 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 16:10:25 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 static void	ft_error(void);
@@ -22,7 +34,8 @@ int	ft_check_normal(char **argv, int isString)
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
-				if (argv[i][j] != '-' || (argv[i][j + 1] < '0' || argv[i][j + 1] > '9'))
+				if (argv[i][j] != '-' || (argv[i][j + 1] < '0' || argv[i][j
+						+ 1] > '9'))
 				{
 					ft_error();
 					return (0);

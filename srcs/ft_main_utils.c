@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_main_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalimol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 15:25:00 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/22 15:48:38 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/24 15:31:04 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../headers/ft_stack.h"
+#include <stdlib.h>
 
 int	ft_init_stacks(t_stack **a, t_stack **b)
 {
-	t_stack *a_new;
+	t_stack	*a_new;
 	t_stack	*b_new;
 
 	a_new = (t_stack *)malloc(sizeof(t_stack));
@@ -34,14 +34,14 @@ void	ft_free_stacks(t_stack *a, t_stack *b)
 	if (a)
 	{
 		if (a->num)
-			free (a->num);
-		free (a);
+			free(a->num);
+		free(a);
 	}
 	if (b)
 	{
 		if (b->num)
-			free (b->num);
-		free (b);
+			free(b->num);
+		free(b);
 	}
 }
 

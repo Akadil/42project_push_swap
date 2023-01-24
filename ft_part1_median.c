@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_part1_median.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 14:25:31 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 14:25:32 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "headers/ft_part1.h"
 
 /*
@@ -16,29 +28,29 @@
             So it will be cheaper to push the higher numbers.
 */
 
-int ft_part1_median(t_stack *a, t_stack *b)
+int	ft_part1_median(t_stack *a, t_stack *b)
 {
-    int median;
-    int i;
+	int	median;
+	int	i;
 
-    median = 0;
-    while (a->size > 3)
-    {
-        median = ft_find_median(a);
-        if (median == -1)
-            return (0);
-        i = 0;
-        while (i < a->size)
-        {
-            if (a->num[0] < median)
-                ft_commands_pb(a, b);
-            else
-            {
-                i++;
-                ft_commands_ra(a);
-            }
-        }
-    }
-    ft_sort_a(a);
-    return (1);
+	median = 0;
+	while (a->size > 3)
+	{
+		median = ft_find_median(a);
+		if (median == -1)
+			return (0);
+		i = 0;
+		while (i < a->size)
+		{
+			if (a->num[0] < median)
+				ft_commands_pb(a, b);
+			else
+			{
+				i++;
+				ft_commands_ra(a);
+			}
+		}
+	}
+	ft_sort_a(a);
+	return (1);
 }

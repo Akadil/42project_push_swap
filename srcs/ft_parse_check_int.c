@@ -1,7 +1,19 @@
-static int	ft_skip_isspace(const char *str);
-static int	ft_check_the_sign(const char *str, int *pos);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_check_int.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 15:31:31 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 16:14:12 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+static int			ft_skip_isspace(const char *str);
+static int			ft_check_the_sign(const char *str, int *pos);
 static unsigned int	ft_atoi_uint(const char *str);
-static int  ft_strlen(const char *str);
+static int			ft_strlen(const char *str);
 
 /*
 	Goal:	Check if string is int
@@ -86,8 +98,8 @@ static int	ft_check_the_sign(const char *str, int *pos)
 static unsigned int	ft_atoi_uint(const char *str)
 {
 	unsigned int	returner;
-	int		i;
-	int		sign;
+	int				i;
+	int				sign;
 
 	i = ft_skip_isspace(str);
 	sign = ft_check_the_sign(str, &i);
@@ -100,12 +112,12 @@ static unsigned int	ft_atoi_uint(const char *str)
 	return (returner * sign);
 }
 
-static int  ft_strlen(const char *str)
+static int	ft_strlen(const char *str)
 {
-    int size;
+	int	size;
 
-    size = 0;
-    while (str && str[size])
-        size++;
-    return (size);
+	size = 0;
+	while (str && str[size])
+		size++;
+	return (size);
 }

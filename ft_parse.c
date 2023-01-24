@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 14:22:09 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 15:47:36 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "headers/ft_parse.h"
 
-static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isString);
+static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isS);
 static int	ft_parse_string(char **argv, t_stack *stack);
 
 /*
@@ -41,7 +53,7 @@ int	ft_parse(int argc, char **argv, t_stack *a, t_stack *b)
 						the string too. So I need a variable to distinguish
 	output:	signal 
 */
-static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isString)
+static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isS)
 {
 	int	*container;
 	int	i;
@@ -49,14 +61,15 @@ static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isString)
 
 	if (ft_check_normal(argv, 0) == 0)
 		return (0);
-	if (!(container = (int *)malloc(sizeof(int) * (argc - 1))))
+	container = (int *)malloc(sizeof(int) * (argc - 1));
+	if (!container)
 		return (0);
 	i = 0;
-	while (argv[i + 1 - isString])
+	while (argv[i + 1 - isS])
 	{
-		if (ft_check_for_int(argv[i + 1 - isString]) == 0)
+		if (ft_check_for_int(argv[i + 1 - isS]) == 0)
 			return (ft_free_return0(container));
-		num = ft_atoi(argv[i + 1 - isString]);
+		num = ft_atoi(argv[i + 1 - isS]);
 		if (ft_check_for_duplicates(num, container, i) == 0)
 			return (ft_free_return0(container));
 		container[i++] = num;
@@ -84,15 +97,15 @@ static int	ft_parse_string(char **argv, t_stack *stack)
 		return (0);
 	if (ft_check_normal(new_argv, 1) == 0)
 	{
-		ft_free_doubleArray(new_argv);
+		ft_free_double_array(new_argv);
 		return (0);
 	}
 	new_argc = ft_find_n_word(argv[1], ' ') + 1;
 	if (ft_parse_normal(new_argc, new_argv, stack, 1) == 0)
 	{
-		ft_free_doubleArray(new_argv);
+		ft_free_double_array(new_argv);
 		return (0);
 	}
-	ft_free_doubleArray(new_argv);
+	ft_free_double_array(new_argv);
 	return (1);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_createB.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 15:31:51 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 16:09:25 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../headers/ft_stack.h"
 #include <stdlib.h>
 
@@ -11,21 +23,21 @@
     outpur: signal -    1 if success, 0 if fail
 */
 
-int ft_create_b(int size, t_stack *b)
+int	ft_create_b(int size, t_stack *b)
 {
-    int *array;
-    int i;
+	int	*array;
+	int	i;
 
-    array = (int *)malloc(sizeof(int) * size);
-    if (!array)
-        return (0);
-    i = 0;
-    while (i < size)
-    {
-        array[i] = 0;
-        i++;
-    }
-    b->num = array;
-    b->size = 0;
-    return (1);
+	array = (int *)malloc(sizeof(int) * size);
+	if (!array)
+		return (0);
+	i = 0;
+	while (i < size)
+	{
+		array[i] = 0;
+		i++;
+	}
+	b->num = array;
+	b->size = 0;
+	return (1);
 }

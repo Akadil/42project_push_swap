@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_part2_cost.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 15:45:49 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 15:45:51 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "headers/ft_part2.h"
 
 /*
@@ -10,29 +22,29 @@
             be at the top
 */
 
-int ft_part2_cost(t_stack *a, t_stack *b)
+int	ft_part2_cost(t_stack *a, t_stack *b)
 {
-    int *costs;
-    int i;
-    int min_pos;
+	int	*costs;
+	int	i;
+	int	min_pos;
 
-    while (b->size != 0)
-    {
-        min_pos = 0;
-        costs = (int *)malloc(sizeof(int) * b->size);
-        if (!costs)
-            return (0);
-        i = 0;
-        while (i < b->size)
-        {
-            costs[i] = ft_find_cost(a, b, i);
-            if (costs[i] < costs[min_pos])
-                min_pos = i;
-            i++;
-        }
-        ft_operate_with_cost(a, b, min_pos);
-        free (costs);
-    }
-    ft_stabilizer(a);
-    return (1);
+	while (b->size != 0)
+	{
+		min_pos = 0;
+		costs = (int *)malloc(sizeof(int) * b->size);
+		if (!costs)
+			return (0);
+		i = 0;
+		while (i < b->size)
+		{
+			costs[i] = ft_find_cost(a, b, i);
+			if (costs[i] < costs[min_pos])
+				min_pos = i;
+			i++;
+		}
+		ft_operate_with_cost(a, b, min_pos);
+		free (costs);
+	}
+	ft_stabilizer(a);
+	return (1);
 }

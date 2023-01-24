@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_utils.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/24 14:30:48 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/24 15:31:57 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -17,20 +29,20 @@ int	ft_check_for_duplicates(int num, int *con, int ind)
 	return (1);
 }
 
-void	ft_free_doubleArray(char **trash)
+void	ft_free_double_array(char **trash)
 {
 	int	i;
 
 	i = 0;
 	while (trash && trash[i])
-		free (trash[i++]);
-	free (trash);
+		free(trash[i++]);
+	free(trash);
 }
 
 int	ft_free_return0(int *trash)
 {
 	ft_error();
-	free (trash);
+	free(trash);
 	return (0);
 }
 
