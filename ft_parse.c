@@ -83,7 +83,10 @@ static int	ft_parse_string(char **argv, t_stack *stack)
 	if (!new_argv)
 		return (0);
 	if (ft_check_normal(new_argv, 1) == 0)
+	{
+		ft_free_doubleArray(new_argv);
 		return (0);
+	}
 	new_argc = ft_find_n_word(argv[1], ' ') + 1;
 	if (ft_parse_normal(new_argc, new_argv, stack, 1) == 0)
 	{

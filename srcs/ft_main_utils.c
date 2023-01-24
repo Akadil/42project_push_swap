@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "../headers/ft_stack.h"
 
-int	ft_init_stacks(t_stack *a, t_stack *b)
+int	ft_init_stacks(t_stack **a, t_stack **b)
 {
 	t_stack *a_new;
 	t_stack	*b_new;
@@ -21,11 +21,11 @@ int	ft_init_stacks(t_stack *a, t_stack *b)
 	a_new = (t_stack *)malloc(sizeof(t_stack));
 	if (!a_new)
 		return (0);
+	*a = a_new;
 	b_new = (t_stack *)malloc(sizeof(t_stack));
 	if (!b_new)
 		return (0);
-	a = a_new;
-	b = b_new;
+	*b = b_new;
 	return (1);
 }
 

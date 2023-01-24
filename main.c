@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc < 2)
 		return (0);
-	out_signal = ft_init_stacks(a, b);
+	out_signal = ft_init_stacks(&a, &b);
 	if (out_signal == 0)
 		return (ft_free_and_error(a, b));
 	out_signal = ft_parse(argc, argv, a, b);

@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include "ft_stack.h"
 
-int		ft_init_stacks(t_stack *a, t_stack *b);
+int		ft_init_stacks(t_stack **a, t_stack **b);
 int		ft_parse(int argc, char **argv, t_stack *a, t_stack *b);
 int		ft_part1_median(t_stack *a, t_stack *b);
 int		ft_part2_cost(t_stack *a, t_stack *b);
