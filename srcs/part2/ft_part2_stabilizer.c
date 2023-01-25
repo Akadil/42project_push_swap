@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_part2_stabilizer.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalimol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:33:53 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:02:33 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:50:44 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_commands.h"
+#include "ft_commands.h"
 
 static int	ft_find_min(t_stack *stack);
 
@@ -36,14 +36,14 @@ void	ft_stabilizer(t_stack *a)
 	{
 		while (i < pos)
 		{
-			ft_commands_ra(a);
+			ft_commands_ra(a, 1);
 			i++;
 		}
 		return ;
 	}
 	while (i < a->size - pos)
 	{
-		ft_commands_rra(a);
+		ft_commands_rra(a, 1);
 		i++;
 	}
 }

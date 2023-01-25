@@ -6,11 +6,11 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 15:25:00 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 15:31:04 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:49:02 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_stack.h"
+#include "ft_stack.h"
 #include <stdlib.h>
 
 int	ft_init_stacks(t_stack **a, t_stack **b)

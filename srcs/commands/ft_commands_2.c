@@ -6,14 +6,14 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:12:06 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:11:00 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:48:29 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_stack.h"
+#include "ft_stack.h"
 #include <unistd.h>
 
-void	ft_commands_ra(t_stack *a)
+void	ft_commands_ra(t_stack *a, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -28,10 +28,11 @@ void	ft_commands_ra(t_stack *a)
 		i++;
 	}
 	a->num[i - 1] = rotator;
-	write(1, "ra\n", 3);
+	if (to_print == 1)
+		write(1, "ra\n", 3);
 }
 
-void	ft_commands_rb(t_stack *b)
+void	ft_commands_rb(t_stack *b, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -46,10 +47,11 @@ void	ft_commands_rb(t_stack *b)
 		i++;
 	}
 	b->num[i - 1] = rotator;
-	write(1, "rb\n", 3);
+	if (to_print == 1)
+		write(1, "rb\n", 3);
 }
 
-void	ft_commands_rr(t_stack *a, t_stack *b)
+void	ft_commands_rr(t_stack *a, t_stack *b, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -73,10 +75,11 @@ void	ft_commands_rr(t_stack *a, t_stack *b)
 		}
 		b->num[i - 1] = rotator;
 	}
-	write(1, "rr\n", 3);
+	if (to_print == 1)
+		write(1, "rr\n", 3);
 }
 
-void	ft_commands_rra(t_stack *a)
+void	ft_commands_rra(t_stack *a, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -91,10 +94,11 @@ void	ft_commands_rra(t_stack *a)
 		i--;
 	}
 	a->num[0] = rotator;
-	write(1, "rra\n", 4);
+	if (to_print == 1)
+		write(1, "rra\n", 4);
 }
 
-void	ft_commands_rrb(t_stack *b)
+void	ft_commands_rrb(t_stack *b, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -109,5 +113,6 @@ void	ft_commands_rrb(t_stack *b)
 		i--;
 	}
 	b->num[0] = rotator;
-	write(1, "rrb\n", 4);
+	if (to_print == 1)
+		write(1, "rrb\n", 4);
 }

@@ -6,14 +6,14 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:30:45 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:13:39 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:48:24 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_stack.h"
+#include "ft_stack.h"
 #include <unistd.h>
 
-void	ft_commands_pa(t_stack *a, t_stack *b)
+void	ft_commands_pa(t_stack *a, t_stack *b, int to_print)
 {
 	int	pusher;
 	int	i;
@@ -36,10 +36,11 @@ void	ft_commands_pa(t_stack *a, t_stack *b)
 	}
 	a->num[0] = pusher;
 	a->size = a->size + 1;
-	write(1, "pa\n", 3);
+	if (to_print == 1)
+		write(1, "pa\n", 3);
 }
 
-void	ft_commands_pb(t_stack *a, t_stack *b)
+void	ft_commands_pb(t_stack *a, t_stack *b, int to_print)
 {
 	int	pusher;
 	int	i;
@@ -62,10 +63,11 @@ void	ft_commands_pb(t_stack *a, t_stack *b)
 	}
 	b->num[0] = pusher;
 	b->size = b->size + 1;
-	write(1, "pb\n", 3);
+	if (to_print == 1)
+		write(1, "pb\n", 3);
 }
 
-void	ft_commands_sa(t_stack *a)
+void	ft_commands_sa(t_stack *a, int to_print)
 {
 	int	temp;
 
@@ -74,10 +76,11 @@ void	ft_commands_sa(t_stack *a)
 	temp = a->num[0];
 	a->num[0] = a->num[1];
 	a->num[1] = temp;
-	write(1, "sa\n", 3);
+	if (to_print == 1)
+		write(1, "sa\n", 3);
 }
 
-void	ft_commands_sb(t_stack *b)
+void	ft_commands_sb(t_stack *b, int to_print)
 {
 	int	temp;
 
@@ -86,10 +89,11 @@ void	ft_commands_sb(t_stack *b)
 	temp = b->num[0];
 	b->num[0] = b->num[1];
 	b->num[1] = temp;
-	write(1, "sb\n", 3);
+	if (to_print == 1)
+		write(1, "sb\n", 3);
 }
 
-void	ft_commands_ss(t_stack *a, t_stack *b)
+void	ft_commands_ss(t_stack *a, t_stack *b, int to_print)
 {
 	int	temp;
 
@@ -105,5 +109,6 @@ void	ft_commands_ss(t_stack *a, t_stack *b)
 		b->num[0] = b->num[1];
 		b->num[1] = temp;
 	}
-	write(1, "ss\n", 3);
+	if (to_print == 1)
+		write(1, "ss\n", 3);
 }

@@ -6,11 +6,11 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:32:14 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:11:54 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:49:58 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_stack.h"
+#include "ft_part2.h"
 
 static int	ft_find_min(t_stack *stack);
 

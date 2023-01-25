@@ -6,14 +6,14 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:45:24 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 15:45:25 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:52:43 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_stack.h"
+#include "ft_stack.h"
 #include <unistd.h>
 
-void	ft_commands_rrr(t_stack *a, t_stack *b)
+void	ft_commands_rrr(t_stack *a, t_stack *b, int to_print)
 {
 	int	i;
 	int	rotator;
@@ -37,5 +37,6 @@ void	ft_commands_rrr(t_stack *a, t_stack *b)
 			b->num[i + 1] = b->num[i];
 		b->num[0] = rotator;
 	}
-	write(1, "rrr\n", 4);
+	if (to_print == 1)
+		write(1, "rrr\n", 4);
 }

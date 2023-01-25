@@ -1,0 +1,33 @@
+def ft_check(int argc, char argv)
+    // I am going to take it from main work
+    
+void    ft_do_command(a, b, str)
+{
+    if (ft_strcmp(str, "ra\n"))
+        ft_commands_ra(a);
+    // ...
+    else
+        ft_error(a, b);
+}
+
+int   ft_is_sorted(t_stack *a)
+{
+    int   i;
+    
+    // Make an exceptional case for i == 0
+    i = 1;
+    while (i < a->size)
+    {
+        if (a->num[i] <= a->num[i - 1])
+            return (0);
+        i++;
+    }
+    return (1);
+}
+
+int   ft_is_empty(t_stack *b)
+{
+    if (b->size == 0)
+        return (1);
+    return (0);
+}
