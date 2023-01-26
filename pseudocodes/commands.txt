@@ -1,0 +1,6 @@
+def ft_pa(stack a, stack b):
+    delete from a
+    add to b
+    print()
+
+same to the others

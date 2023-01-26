@@ -1,0 +1,55 @@
+def find_cost(stack a, stack b, ind):
+    int cost_ra = ft_cost_ra()
+    int cost_rb = ft_cost_rb()
+    int cost_rra = ft_cost_rra()
+    int cost_rrb = ft_cost_rrb()
+
+    // Maybe I have to add some function here
+    // Like to understand which one is better
+    // The function which will return 1, 2, 3, 4
+    if (max(cost_ra, cost_rb) < /*All other values*/)
+        return max(cost_ra, cost_rb)
+    else if min == cost_rb
+        return cost_rb
+    else if min == cost_rra:
+        return cost_rra
+    else
+        return cost_rrb
+
+def cost_ra(stack, value):
+    int   min = ft_find_min()
+
+    if min < value:
+        int ptr1 = 0
+        int ptr2 = stack->size - 1
+
+        while (stack[ptr1] > value > stack[ptr2])
+            ptr1 ++
+            if ptr2 == stack->size - 1:
+                ptr2 = 0
+            else
+                ptr2 ++
+        return (ptr1);
+    else:
+        while (stack[i] != min)
+            i++;
+        return (i)
+
+def cost_rra(stack, value)
+    int min = ft_find_min()
+
+    if min < value:
+        int ptr1 = 0;
+        int ptr2 = stack->size - 1;
+
+        while (stack[ptr1] > value > stack[ptr2])
+            ptr2 --;
+            if (ptr1 == stack->size - 1)
+                ptr2 = 0
+            else
+                ptr2 --;
+        return (stack->size - ptr2)
+    else:
+        while (stack[i] != min)
+            i++;
+        return (i);

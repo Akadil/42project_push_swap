@@ -1,0 +1,11 @@
+typedef struct{
+    int *nums;
+    int size;
+}
+
+def push_swap(argc, argv):
+    ft_check (argv)
+    stack a = ft_parse(argv)
+    stack b = {0}
+    ft_translation_median(a, b)
+    ft_translation_cost_function(a, b)

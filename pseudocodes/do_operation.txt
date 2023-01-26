@@ -1,0 +1,27 @@
+def do_operation():
+    int cost_ra = ft_cost_ra()
+    int cost_rb = ft_cost_rb()
+    int cost_rra = ft_cost_rra()
+    int cost_rrb = ft_cost_rrb()
+
+    if (max(cost_ra, cost_rb) < /*All other values*/)
+        do_ra_rb(cost_ra, cost_rb)
+    else if min == cost_rb
+        do_ra_rrb(cost_ra, cost_rrb)
+    else if min == cost_rra:
+        return cost_rra
+    else
+        return cost_rrb
+
+def do_ra_rb(int cost_ra, int cost_rb):
+    while (ra != 0 and rb != 0)
+        ft_commands_rr()
+        ra--
+        rb--
+    while (ra != 0)
+        ft_commands_ra()
+        ra--
+    while (rb != 0)
+        ft_commands_rb()
+        rb --
+    ft_commands_pb()
