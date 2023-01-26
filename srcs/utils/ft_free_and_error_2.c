@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free_and_error_2.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/26 15:23:53 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/26 15:48:35 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_stack.h"
 #include <stdlib.h>
+#include <unistd.h>
 
+static void	ft_error(void);
+void		ft_free_2arraystr(char **trash);
 int			ft_free_2arraystr_error_0(char **trash);
 int			ft_free_2arraystr_0(char **trash);
-void		ft_free_2arraystr(char **trash);
-int			ft_free_arrayint_error_0(int *trash);
-static void	ft_error(void);
+int			ft_free_arrayint_0(int *trash);
 
 int	ft_free_2arraystr_error_0(char **trash)
 {
@@ -29,9 +42,8 @@ void	ft_free_2arraystr(char **trash)
 	free(trash);
 }
 
-int	ft_free_arrayint_error_0(int *trash)
+int	ft_free_arrayint_0(int *trash)
 {
-	ft_error();
 	free(trash);
 	return (0);
 }

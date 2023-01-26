@@ -3,6 +3,7 @@
 
 # include "ft_commands.h"
 # include "ft_stack.h"
+# include "ft_free_and_error.h"
 # include "get_next_line.h"
 # include "main.h"
 # include <unistd.h>

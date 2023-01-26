@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bonus_utils.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
+/*   Updated: 2023/01/26 15:51:36 by akalimol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_bonus.h"
 
 void	ft_do_command(t_stack *a, t_stack *b, char *str)
@@ -25,7 +37,7 @@ void	ft_do_command(t_stack *a, t_stack *b, char *str)
 	else if (ft_strcmp(str, "rrr\n") == 1)
 		ft_commands_rrr(a, b, 0);
 	else
-		ft_free_and_error(a, b);
+		ft_free_stacks(a, b);
 }
 
 int	ft_is_sorted(t_stack *a)

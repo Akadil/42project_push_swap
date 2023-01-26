@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:22:09 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/25 16:49:25 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:15:28 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ static int	ft_parse_normal(int argc, char **argv, t_stack *stack, int isS)
 	while (argv[i + 1 - isS])
 	{
 		if (ft_check_for_int(argv[i + 1 - isS]) == 0)
-			return (ft_free_return0(container));
+			return (ft_free_arrayint_0(container));
 		num = ft_atoi(argv[i + 1 - isS]);
 		if (ft_check_for_duplicates(num, container, i) == 0)
-			return (ft_free_return0(container));
+			return (ft_free_arrayint_0(container));
 		container[i++] = num;
 	}
 	stack->num = container;
@@ -96,16 +96,10 @@ static int	ft_parse_string(char **argv, t_stack *stack)
 	if (!new_argv)
 		return (0);
 	if (ft_check_normal(new_argv, 1) == 0)
-	{
-		ft_free_double_array(new_argv);
-		return (0);
-	}
+		return(ft_free_2arraystr_0(new_argv));
 	new_argc = ft_find_n_word(argv[1], ' ') + 1;
 	if (ft_parse_normal(new_argc, new_argv, stack, 1) == 0)
-	{
-		ft_free_double_array(new_argv);
-		return (0);
-	}
-	ft_free_double_array(new_argv);
+		return(ft_free_2arraystr_0(new_argv));
+	ft_free_2arraystr(new_argv);
 	return (1);
 }

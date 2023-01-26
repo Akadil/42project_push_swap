@@ -6,13 +6,11 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:31:39 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:23:46 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:00:54 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-static void	ft_error(void);
 
 /*
     Goal:   Check if the argv is valid or not
@@ -36,19 +34,11 @@ int	ft_check_normal(char **argv, int isString)
 			{
 				if (argv[i][j] != '-' || (argv[i][j + 1] < '0' || argv[i][j
 						+ 1] > '9'))
-				{
-					ft_error();
 					return (0);
-				}
 			}
 			j++;
 		}
 		i++;
 	}
 	return (1);
-}
-
-static void	ft_error(void)
-{
-	write(1, "Error\n", 6);
 }

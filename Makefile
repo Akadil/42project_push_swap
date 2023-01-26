@@ -1,18 +1,20 @@
 NAME		=	push_swap
 B_NAME		=	checker
-SRC_DIR	=	srcs
+SRC_DIR		=	srcs
 SRCS		= 	main.c parse/ft_parse.c part1/ft_part1_median.c part2/ft_part2_cost.c \
 				commands/ft_commands_1.c commands/ft_commands_2.c commands/ft_commands_3.c \
-				init/ft_main_utils.c parse/ft_parse_check_int.c parse/ft_parse_check.c \
-				parse/ft_parse_createB.c parse/ft_parse_utils.c part1/ft_part1_utils.c \
+				utils/ft_stack_init.c utils/ft_free_and_error_1.c utils/ft_free_and_error_2.c \
+				parse/ft_parse_check_int.c parse/ft_parse_check.c parse/ft_parse_createB.c \
+				parse/ft_parse_utils.c part1/ft_quicksort.c part1/ft_part1_utils.c \
 				part2/ft_part2_find_cost.c part2/ft_part2_find_cost_seperated.c \
 				part2/ft_part2_operation.c part2/ft_part2_operation_seperated.c \
-				part2/ft_part2_stabilizer.c part1/ft_quicksort.c
+				part2/ft_part2_stabilizer.c 
 
 B_SRCS		=	bonus/ft_bonus.c bonus/ft_bonus_utils.c bonus/get_next_line.c parse/ft_parse.c \
 				commands/ft_commands_1.c commands/ft_commands_2.c commands/ft_commands_3.c \
-				bonus/get_next_line_utils.c init/ft_main_utils.c parse/ft_parse_check_int.c \
-				parse/ft_parse_check.c parse/ft_parse_createB.c parse/ft_parse_utils.c
+				utils/ft_stack_init.c utils/ft_free_and_error_1.c utils/ft_free_and_error_2.c \
+				bonus/get_next_line_utils.c parse/ft_parse_check_int.c parse/ft_parse_utils.c \
+				parse/ft_parse_check.c parse/ft_parse_createB.c 
 
 CFLAGS		= -Wall -Werror -Wextra
 CC			= cc
@@ -30,7 +32,7 @@ ${NAME} : ${OBJS}
 		${CC} $(OBJS) -o $(NAME) -L./libft/ -lft
 
 bonus :	${B_OBJS}
-		${CC} ${B_OBJS} -o ${B_NAME} -L./libft/ -lft
+		${CC} -g ${B_OBJS} -o ${B_NAME} -L./libft/ -lft
 
 ${BUILD_DIR}/%.o:%.c
 		${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o $@

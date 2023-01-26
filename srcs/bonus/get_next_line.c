@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 15:45:20 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/25 16:48:14 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:24:41 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ static int	ft_clean_up(char **_buffer, int len)
 	}
 	if (i == len)
 	{
-		free (rest);
-		free (*_buffer);
+		free(rest);
+		free(*_buffer);
 		*_buffer = NULL;
 		return (1);
 	}
 	rest[i - len] = '\0';
-	free (*_buffer);
+	free(*_buffer);
 	*_buffer = rest;
 	return (1);
 }
