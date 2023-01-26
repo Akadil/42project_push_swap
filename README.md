@@ -53,7 +53,7 @@ In no way can it quit in an unexpected manner (segmentation fault, bus error, do
 
 Generally, we are going to use the bubblesort algorithm. Firstly, we push everything to stack 'b' except 3 highest number and sort it. So we will have sorted stack "a". Then push numbers from 'b' for the correct place in 'a', so that it will keep sorted
 
-My program is divided into 3 stages: (1) Parsing "ft_parse()", (2) pushing to stack 'b' by median method "ft_part1_median()", and then (3) pushing back to stack 'a' by calculating the cost of each number "ft_part2_cost()"
+My program is divided into 3 stages: (1) '''Parsing''' "ft_parse()", (2) pushing to stack 'b' by median method "ft_part1_median()", and then (3) pushing back to stack 'a' by calculating the cost of each number "ft_part2_cost()"
 
 Median method:  Find the median of the stack and then push elements lower than median to b. Repeat until only 3 elements left in stack 'a'. As a result, the stack 'b' will be some kind of 'sorted' with higher numbers at the top. So it will be cheaper to push the higher number first
 		
