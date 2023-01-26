@@ -1,5 +1,5 @@
-# Push swap - A journey to find most efficient sorting algorithm
-
+# Push swap - A journey to find the most efficient sorting algorithm
+> Push_swap is an algorithm project at school 42.
 
 ## Challenge
 
@@ -31,6 +31,28 @@ the last one.
 At the end, **stack b** must empty empty and all integers must be in **stack a**, sorted in ascending order. <br />
 <br />
 
+
+## The Project
+Create two programs: ```checker``` and ```push_swap```. <br />
+
+The ```checker``` program reads a random list of integers from the stdin, stores them, and checks to see
+if they are sorted. <br />
+<br />
+The ```push_swap``` program calculates the moves to sort the integers – *pushing, popping, swapping* and *rotating* 
+them between **stack a** and **stack b** – and displays those directions on the stdout. <br />
+<br />
+You can pipe ```push_swap``` into ```checker```, and ```checker``` will verify that ```push_swap```'s instructions were successful. 
+<br />
+
+Both programs must mandatorily parse input for errors, including empty strings, no parameters, 
+non-numeric parameters, duplicates, and invalid/non-existent instructions.
+
+**Push_Swap** must conform to the [42 Norm](https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf). <br />
+Using normal ```libc``` functions is strictly forbidden. Students are however, allowed to use: ```write```, ```read```, ```malloc```, ```free```, ```exit```. 
+It must not have any memory leaks. Errors must be handled carefully. <br />
+In no way can it quit in an unexpected manner (segmentation fault, bus error, double free, etc).
+
+</br></br>
 
 
 ### How to build:
