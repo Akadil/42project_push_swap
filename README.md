@@ -1,2 +1,52 @@
-# push_swap_draft
-The updated version of my push swap (Not working). Just general picture
+# Push swap - A journey to find most efficient sorting algorithm
+
+
+## Challenge
+
+Sort a random list of integers using the smallest number of moves, 2 stacks
+and a limited set of operations. <br />
+<br />
+
+You start with two empty stacks: **a** and **b**. You are given a random list of integers via command line arguments.
+<br />
+<br />
+
+Only these moves are allowed:
+- `sa` : swap a - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements).
+- `sb` : swap b - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements).
+- `ss` : `sa` and `sb` at the same time.
+- `pa` : push a - take the first element at the top of b and put it at the top of a. Do
+nothing if b is empty.
+- `pb` : push b - take the first element at the top of a and put it at the top of b. Do
+nothing if a is empty.
+- `ra` : rotate a - shift up all elements of stack a by 1. The first element becomes
+the last one.
+- `rb` : rotate b - shift up all elements of stack b by 1. The first element becomes the last one.
+- `rr` : `ra` and `rb` at the same time.
+- `rra` : reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one.
+- `rrb` : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
+- `rrr` : `rra` and `rrb` at the same time.
+<br />
+
+At the end, **stack b** must empty empty and all integers must be in **stack a**, sorted in ascending order. <br />
+<br />
+
+
+
+### How to build:
+
+Clone repo and type:
+
+```Bash
+$ make
+```
+Run `push_swap` program with array of ints as argument:
+
+```Bash
+$ ./push_swap 5 4 3 2 1
+```
+
+### Visualisation of execution big stack operation list example:
+
+<img src="./visualizer.gif" width="500" alt="vizualize">
+
