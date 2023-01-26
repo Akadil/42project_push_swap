@@ -6,14 +6,12 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:30:48 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:24:48 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:02:17 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
-
-static void	ft_error(void);
 
 int	ft_check_for_duplicates(int num, int *con, int ind)
 {
@@ -27,23 +25,6 @@ int	ft_check_for_duplicates(int num, int *con, int ind)
 		i++;
 	}
 	return (1);
-}
-
-void	ft_free_double_array(char **trash)
-{
-	int	i;
-
-	i = 0;
-	while (trash && trash[i])
-		free(trash[i++]);
-	free(trash);
-}
-
-int	ft_free_return0(int *trash)
-{
-	ft_error();
-	free(trash);
-	return (0);
 }
 
 int	ft_find_n_word(char const *s, char c)
@@ -69,9 +50,4 @@ int	ft_find_n_word(char const *s, char c)
 		i++;
 	}
 	return (n);
-}
-
-static void	ft_error(void)
-{
-	write(1, "Error\n", 6);
 }
