@@ -11,7 +11,7 @@
                 "${workspaceFolder}/srcs/bonus/*.c",
                 "${workspaceFolder}/srcs/commands/*.c",
                 "${workspaceFolder}/srcs/parse/*.c",
-                "${workspaceFolder}/srcs/init/*.c",
+                "${workspaceFolder}/srcs/utils/*.c",
                 "-o",
                 "${workspaceFolder}/checker",
                 "-L${workspaceFolder}/libft",
