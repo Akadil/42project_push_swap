@@ -7,12 +7,15 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/*.c",
-                "${workspaceFolder}/srcs/*.c",
-                "${workspaceFolder}/srcs/libft/*.c",
-                "${workspaceFolder}/libft/*.c",
+                "-I${workspaceFolder}/headers",
+                "${workspaceFolder}/srcs/bonus/*.c",
+                "${workspaceFolder}/srcs/commands/*.c",
+                "${workspaceFolder}/srcs/parse/*.c",
+                "${workspaceFolder}/srcs/init/*.c",
                 "-o",
-                "${fileDirname}/a.out"
+                "${workspaceFolder}/checker",
+                "-L${workspaceFolder}/libft",
+                "-lft"
             ],
             "options": {
                 "cwd": "${fileDirname}"
