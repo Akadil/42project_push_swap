@@ -3,12 +3,7 @@
 
 ## Challenge
 
-Sort a random list of integers using the smallest number of moves, 2 stacks
-and a limited set of operations. <br />
-<br />
-
-You start with two empty stacks: **a** and **b**. You are given a random list of integers via command line arguments.
-<br />
+Sort a random list of integers using the smallest number of moves, 2 stacks and a limited set of operations. You start with two empty stacks: **a** and **b**. You are given a random list of integers via command line arguments. <br />
 <br />
 
 Only these moves are allowed:
