@@ -55,9 +55,9 @@ Generally, we are going to use the bubblesort algorithm. Firstly, we push everyt
 
 My program is divided into 3 stages: (1) ```Parsing``` "ft_parse()", (2) pushing to stack 'b' by ```median method``` "ft_part1_median()", and then (3) pushing back to stack 'a' by ```calculating the cost``` of each number "ft_part2_cost()"
 
-```Median method:```  Find the median of the stack and then push elements lower than median to b. Repeat until only 3 elements left in stack 'a'. As a result, the stack 'b' will be some kind of 'sorted' with higher numbers at the top. So it will be cheaper to push the higher number first
+- ```Median method:```  Find the median of the stack and then push elements lower than median to b. Repeat until only 3 elements left in stack 'a'. As a result, the stack 'b' will be some kind of 'sorted' with higher numbers at the top. So it will be cheaper to push the higher number first
 		
-```Cost method:```    Calculate the numbers of moves needed to move each number from 'b' to 'a' and move the one with the lowest number of move. Repeat the last step until no numbers left in 'b'. 
+- ```Cost method:```    Calculate the numbers of moves needed to move each number from 'b' to 'a' and move the one with the lowest number of move. Repeat the last step until no numbers left in 'b'. 
 
 ## How to build:
 
