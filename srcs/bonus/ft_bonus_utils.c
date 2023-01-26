@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:51:36 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:39:56 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	ft_is_empty(t_stack *b)
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0')

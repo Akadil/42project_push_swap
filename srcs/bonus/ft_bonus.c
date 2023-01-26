@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:20 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 16:21:02 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:39:21 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	char *str;
+	t_stack	*a;
+	t_stack	*b;
+	char	*str;
 
 	a = NULL;
 	b = NULL;

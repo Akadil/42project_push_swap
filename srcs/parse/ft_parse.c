@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:22:09 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:15:28 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:40:39 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,10 +96,10 @@ static int	ft_parse_string(char **argv, t_stack *stack)
 	if (!new_argv)
 		return (0);
 	if (ft_check_normal(new_argv, 1) == 0)
-		return(ft_free_2arraystr_0(new_argv));
+		return (ft_free_2arraystr_0(new_argv));
 	new_argc = ft_find_n_word(argv[1], ' ') + 1;
 	if (ft_parse_normal(new_argc, new_argv, stack, 1) == 0)
-		return(ft_free_2arraystr_0(new_argv));
+		return (ft_free_2arraystr_0(new_argv));
 	ft_free_2arraystr(new_argv);
 	return (1);
 }
