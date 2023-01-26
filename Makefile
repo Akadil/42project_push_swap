@@ -25,13 +25,15 @@ B_SRCS		:= $(B_SRCS:%=$(SRC_DIR)/%)
 OBJS		= $(SRCS:%.c=$(BUILD_DIR)/%.o)
 B_OBJS		= $(B_SRCS:%.c=$(BUILD_DIR)/%.o)
 
-all : ${NAME}
+all			: ${NAME}
 
-${NAME} : ${OBJS}
+${NAME}		: ${OBJS}
 		make -C libft
 		${CC} $(OBJS) -o $(NAME) -L./libft/ -lft
 
-bonus :	${B_OBJS}
+bonus		: ${B_NAME}
+
+${B_NAME}	: ${B_OBJS}
 		${CC} -g ${B_OBJS} -o ${B_NAME} -L./libft/ -lft
 
 ${BUILD_DIR}/%.o:%.c
