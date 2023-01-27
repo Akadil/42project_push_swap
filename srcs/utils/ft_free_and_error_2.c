@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:23:53 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:48:35 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/27 13:12:57 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int	ft_free_arrayint_0(int *trash)
 
 static void	ft_error(void)
 {
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 }
