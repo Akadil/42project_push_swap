@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 16:39:56 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:02:03 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,6 @@ void	ft_do_command(t_stack *a, t_stack *b, char *str)
 		ft_commands_rrr(a, b, 0);
 	else
 		ft_free_stacks(a, b);
-}
-
-int	ft_is_sorted(t_stack *a)
-{
-	int	i;
-
-	i = 0;
-	while (i < a->size)
-	{
-		if (a->num[i] <= a->num[i - 1])
-			return (0);
-		i++;
-	}
-	return (1);
 }
 
 int	ft_is_empty(t_stack *b)

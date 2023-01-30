@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 14:28:05 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:09:43 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:13:31 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ int	main(int argc, char **argv)
 	out_signal = ft_parse(argc, argv, a, b);
 	if (out_signal == 0)
 		return (ft_free_stacks_error_0(a, b));
+	out_signal = ft_is_sorted(a);
+	if (out_signal == 1)
+		return (ft_free_stacks_0(a, b));
 	out_signal = ft_part1_median(a, b);
 	if (out_signal == 0)
 		return (ft_free_stacks_0(a, b));
