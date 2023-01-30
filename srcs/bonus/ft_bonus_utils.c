@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/30 18:02:03 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:05:49 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,15 @@ int	ft_is_empty(t_stack *b)
 	if (b->size == 0)
 		return (1);
 	return (0);
+}
+
+int	ft_result_free_return(t_stack *a, t_stack *b, int res)
+{
+	if (res == 1)
+		write (1, "Ok\n", 3);
+	else
+		write (1, "Ko\n", 3);
+	return (ft_free_stacks_0(a, b));
 }
 
 int	ft_strcmp(char *s1, char *s2)

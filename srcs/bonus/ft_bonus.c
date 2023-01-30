@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:20 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/30 18:04:56 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:08:24 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (ft_init_stacks(&a, &b) == 0)
+	if (ft_init_stacks(&a, &b) == 0 || argc < 2 || argv[1] == (void *)0)
 		return (ft_free_stacks_0(a, b));
-	if (ft_parse(argc, argv, a, b) == 0 || ft_is_sorted(a) == 1)
+	if (ft_parse(argc, argv, a, b) == 0)
 		return (ft_free_stacks_error_0(a, b));
+	if (ft_is_sorted(a) == 1)
+		return (ft_free_stacks_0(a, b));
 	str = get_next_line(0);
 	while (str)
 	{
@@ -33,8 +35,7 @@ int	main(int argc, char **argv)
 		str = get_next_line(0);
 	}
 	if (ft_is_sorted(a) == 1 && ft_is_empty(b) == 1)
-		write(1, "Ok\n", 3);
+		return (ft_result_free_return(a, b, 1));
 	else
-		write(1, "Ko\n", 3);
-	return (ft_free_stacks_0(a, b));
+		return (ft_result_free_return(a, b, 0));
 }

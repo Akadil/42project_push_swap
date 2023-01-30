@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bonus.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalimol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 16:41:39 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 16:41:41 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:05:59 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <unistd.h>
 
 void	ft_do_command(t_stack *a, t_stack *b, char *str);
+int	ft_result_free_return(t_stack *a, t_stack *b, int res);
 int		ft_is_sorted(t_stack *a);
 int		ft_is_empty(t_stack *b);
 int		ft_strcmp(char *s1, char *s2);
