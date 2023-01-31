@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:07:46 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/30 19:25:26 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:55:05 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_free_2arraystr_0(char **trash);
 void	ft_free_2arraystr(char **trash);
 int		ft_free_arrayint_0(int *trash);
 int		ft_free_str_0(char *str);
+void	ft_error(void);
 
 
 #endif

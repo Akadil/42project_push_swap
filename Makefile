@@ -10,11 +10,11 @@ SRCS		= 	main.c parse/ft_parse.c part1/ft_part1_median.c part2/ft_part2_cost.c \
 				part2/ft_part2_operation.c part2/ft_part2_operation_seperated.c \
 				part2/ft_part2_stabilizer.c utils/ft_is_sorted.c
 
-B_SRCS		=	bonus/ft_bonus.c bonus/ft_bonus_utils.c bonus/get_next_line.c parse/ft_parse.c \
+B_SRCS		=	bonus/ft_bonus.c bonus/ft_bonus_utils_1.c bonus/ft_bonus_utils_2.c bonus/get_next_line.c parse/ft_parse.c \
 				commands/ft_commands_1.c commands/ft_commands_2.c commands/ft_commands_3.c \
 				utils/ft_stack_init.c utils/ft_free_and_error_1.c utils/ft_free_and_error_2.c \
 				bonus/get_next_line_utils.c parse/ft_parse_check_int.c parse/ft_parse_utils.c \
-				parse/ft_parse_check.c parse/ft_parse_createB.c utils/ft_is_sorted.c
+				parse/ft_parse_check.c parse/ft_parse_createB.c utils/ft_is_sorted.c 
 
 CFLAGS		= -g -Wall -Werror -Wextra
 CC			= cc

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bonus_utils.c                                   :+:      :+:    :+:   */
+/*   ft_bonus_utils_1.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/31 12:29:46 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:02:56 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_bonus.h"
 
-void	ft_do_command(t_stack *a, t_stack *b, char *str)
+static int	ft_do_command_2(t_stack *a, t_stack *b, char *str);
+
+int	ft_do_command(t_stack *a, t_stack *b, char *str)
 {
 	if (ft_strcmp(str, "pa\n") == 1)
 		ft_commands_pa(a, b, 0);
@@ -24,7 +26,16 @@ void	ft_do_command(t_stack *a, t_stack *b, char *str)
 		ft_commands_sb(b, 0);
 	else if (ft_strcmp(str, "ss\n") == 1)
 		ft_commands_ss(a, b, 0);
-	else if (ft_strcmp(str, "ra\n") == 1)
+	else if (str && str[0] && str[0] == 'r')
+		return (ft_do_command_2(a, b, str));
+	else
+		return (0);
+	return (1);
+}
+
+static int	ft_do_command_2(t_stack *a, t_stack *b, char *str)
+{
+	if (ft_strcmp(str, "ra\n") == 1)
 		ft_commands_ra(a, 0);
 	else if (ft_strcmp(str, "rb\n") == 1)
 		ft_commands_rb(b, 0);
@@ -37,7 +48,8 @@ void	ft_do_command(t_stack *a, t_stack *b, char *str)
 	else if (ft_strcmp(str, "rrr\n") == 1)
 		ft_commands_rrr(a, b, 0);
 	else
-		ft_free_stacks_error(a, b);
+		return (0);
+	return (1);
 }
 
 int	ft_parse_the_commands(t_stack *a, t_stack *b)
@@ -47,43 +59,14 @@ int	ft_parse_the_commands(t_stack *a, t_stack *b)
 	str = get_next_line(0);
 	while (str)
 	{
-		ft_do_command(a, b, str);
-		if (!a)
-			return (ft_free_str_0(str));
+		if (ft_do_command(a, b, str) == 0)
+		{
+			free (str);
+			ft_error();
+			return (0);
+		}
 		free (str);
 		str = get_next_line(0);
 	}
 	return (1);
-}
-
-int	ft_is_empty(t_stack *b)
-{
-	if (b->size == 0)
-		return (1);
-	return (0);
-}
-
-int	ft_result_free_return(t_stack *a, t_stack *b, int res)
-{
-	if (res == 1)
-		write (1, "Ok\n", 3);
-	else
-		write (1, "Ko\n", 3);
-	return (ft_free_stacks_0(a, b));
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
-	}
-	if (s1[i] == '\0' && s2[i] == '\0')
-		return (1);
-	return (0);
 }

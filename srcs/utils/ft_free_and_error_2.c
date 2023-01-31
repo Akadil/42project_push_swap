@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:23:53 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/27 18:29:18 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:54:57 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static void	ft_error(void);
+void	ft_error(void);
 void		ft_free_2arraystr(char **trash);
 int			ft_free_2arraystr_error_0(char **trash);
 int			ft_free_2arraystr_0(char **trash);
@@ -48,7 +48,7 @@ int	ft_free_arrayint_0(int *trash)
 	return (0);
 }
 
-static void	ft_error(void)
+void	ft_error(void)
 {
 	write(2, "Error\n", 6);
 }

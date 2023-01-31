@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:23:45 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/30 19:25:08 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:41:17 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	ft_free_stacks(t_stack *a, t_stack *b)
 			free(b->num);
 		free(b);
 	}
+	a = NULL;
+	b = NULL;
 }
 
 int	ft_free_str_0(char *str)
