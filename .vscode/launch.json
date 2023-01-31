@@ -5,7 +5,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/checker",
-            "args": ["7 53 48 13 29"],
+            "args": ["1 2 0"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

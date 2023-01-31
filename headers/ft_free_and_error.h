@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:07:46 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:42:21 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:25:26 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@
 int		ft_free_stacks_error_0(t_stack *a, t_stack *b);
 int		ft_free_stacks_0(t_stack *a, t_stack *b);
 void	ft_free_stacks(t_stack *a, t_stack *b);
+void ft_free_stacks_error(t_stack *a, t_stack *b);
 int		ft_free_2arraystr_error_0(char **trash);
 int		ft_free_2arraystr_0(char **trash);
 void	ft_free_2arraystr(char **trash);
 int		ft_free_arrayint_0(int *trash);
 int		ft_free_str_0(char *str);
+
 
 #endif

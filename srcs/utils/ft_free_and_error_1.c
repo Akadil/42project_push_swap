@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:23:45 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/27 13:12:53 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:25:08 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static void	ft_error(void);
 void		ft_free_stacks(t_stack *a, t_stack *b);
 int			ft_free_stacks_0(t_stack *a, t_stack *b);
 int			ft_free_stacks_error_0(t_stack *a, t_stack *b);
 int			ft_free_str_0(char *str);
+void ft_free_stacks_error(t_stack *a, t_stack *b);
 
 int	ft_free_stacks_error_0(t_stack *a, t_stack *b)
 {
-	ft_error();
+	write(2, "Error\n", 6);
 	return (ft_free_stacks_0(a, b));
 }
 
@@ -55,7 +55,8 @@ int	ft_free_str_0(char *str)
 	return (0);
 }
 
-static void	ft_error(void)
+void ft_free_stacks_error(t_stack *a, t_stack *b)
 {
+	ft_free_stacks(a, b);
 	write(2, "Error\n", 6);
 }

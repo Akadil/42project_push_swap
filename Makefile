@@ -16,7 +16,7 @@ B_SRCS		=	bonus/ft_bonus.c bonus/ft_bonus_utils.c bonus/get_next_line.c parse/ft
 				bonus/get_next_line_utils.c parse/ft_parse_check_int.c parse/ft_parse_utils.c \
 				parse/ft_parse_check.c parse/ft_parse_createB.c utils/ft_is_sorted.c
 
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS		= -g -Wall -Werror -Wextra
 CC			= cc
 BUILD_DIR 	= .build
 INCLUDES	= headers

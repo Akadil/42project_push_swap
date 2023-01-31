@@ -6,7 +6,7 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 15:24:16 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/30 19:05:49 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:29:46 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,23 @@ void	ft_do_command(t_stack *a, t_stack *b, char *str)
 	else if (ft_strcmp(str, "rrr\n") == 1)
 		ft_commands_rrr(a, b, 0);
 	else
-		ft_free_stacks(a, b);
+		ft_free_stacks_error(a, b);
+}
+
+int	ft_parse_the_commands(t_stack *a, t_stack *b)
+{
+	char	*str;
+
+	str = get_next_line(0);
+	while (str)
+	{
+		ft_do_command(a, b, str);
+		if (!a)
+			return (ft_free_str_0(str));
+		free (str);
+		str = get_next_line(0);
+	}
+	return (1);
 }
 
 int	ft_is_empty(t_stack *b)

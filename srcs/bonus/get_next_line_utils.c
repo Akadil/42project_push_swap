@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akalimol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 11:26:59 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/26 15:24:34 by akalimol         ###   ########.fr       */
+/*   Updated: 2022/12/25 16:05:03 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_check(char *s)
 
 int	ft_free_return(char *trash)
 {
-	free(trash);
+	free (trash);
 	return (0);
 }
 
