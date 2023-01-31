@@ -6,11 +6,10 @@
 /*   By: akalimol <akalimol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:31:31 by akalimol          #+#    #+#             */
-/*   Updated: 2023/01/24 16:14:12 by akalimol         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:11:22 by akalimol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int			ft_skip_isspace(const char *str);
 static int			ft_check_the_sign(const char *str, int *pos);
 static unsigned int	ft_atoi_uint(const char *str);
 static int			ft_strlen(const char *str);
@@ -52,28 +51,6 @@ int	ft_check_for_int(char *s)
 	}
 }
 
-static int	ft_skip_isspace(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ' || str[i] == '\f' || str[i] == '\n')
-		{
-			i++;
-			continue ;
-		}
-		if (str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
-		{
-			i++;
-			continue ;
-		}
-		break ;
-	}
-	return (i);
-}
-
 static int	ft_check_the_sign(const char *str, int *pos)
 {
 	int	sign;
@@ -101,7 +78,9 @@ static unsigned int	ft_atoi_uint(const char *str)
 	int				i;
 	int				sign;
 
-	i = ft_skip_isspace(str);
+	i = 0;
+	if (str[0] && str[0] > '2')
+		return (2147483649);
 	sign = ft_check_the_sign(str, &i);
 	returner = 0;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
